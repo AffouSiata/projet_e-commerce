@@ -1,0 +1,354 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2s ease-out;
+    font-family: 'Roboto Condensed', sans-serif
+}
+html{
+    font-size: 75%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background: #eee;
+}
+ .pail{
+    background-color: rgb(226, 66, 151);
+}
+.container{
+    position: relative;
+   
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 7%;
+    position: relative;
+    z-index: 1000;
+    /* background-color: white; */
+    border-radius: 5px; 
+    box-shadow: 0 .5rem  1rem rgba(0, 0, 0, .2);
+    font-family: 'Raleway', sans-serif;
+}
+header .logo{
+    font-size: 44px;
+    color: #5d5a5a;;
+    font-family: 'Permanent Marker', cursive;
+}
+header .logo span{
+     color:  white;
+     font-family: 'Raleway', sans-serif;
+}
+header #menu{
+    display: none; 
+    padding: 10px 10px;
+    border: 2px solid rgba(0, 0, 0,.2);
+    font-size: 20px;
+    border-radius: 5px;
+    color: #5d5a5a;;
+}
+header .navbar a{
+    margin-left: 20px;
+    font-size: 30px;
+    color: #5d5a5a;;
+}
+header .page1 a{
+    font-size: 20px;
+    color:  rgb(226, 66, 151);
+
+}
+.barre{
+    width: 400px;
+    background-color: white;
+    border-radius: 30px;
+    
+}
+.barre input{
+    width: 350px;
+    /* border: 1px solid black; */
+    padding: 10px;
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: 25px;
+}
+.barre i{
+    font-size: 1.3rem;
+    color: white;
+    border: 1px solid rgb(226, 66, 151);
+    padding: 7px;
+    border-radius: 50%;
+    background-color:rgb(226, 66, 151); ;
+
+} 
+
+header .page1 i{
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #FFF;
+}
+header .navbar a:hover{
+    background-color:rgb(226, 66, 151); 
+    padding: 15px;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+@media (max-width:768px) {
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #FFF;
+        border-top: 1px solid rgba(0, 0, 0,.2);
+        border-bottom: 1px solid rgba(0, 0, 0,.2); 
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,  0 100% );
+    } 
+    header .navbar a{
+        font-size: 30px;
+        display: block;
+        text-align: center; 
+        margin: 2rem 0;
+        color: rgb(146, 142, 142);
+    }
+
+    header #menu{
+        display: initial;
+    }
+    
+    
+}
+.corps{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    background-color:rgb(226, 66, 151) ;
+   
+  }
+  .partie1{
+    width: 50%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 30px 10% 30px 70px;
+    background-color:rgb(226, 66, 151) ;
+  }
+  .partie2{
+    width: 50%;
+    height: 700px;
+    /* background-color: black; */
+  }
+  .partie2 img{
+    width: 100%;
+    height: 60vh;
+    background-color: transparent;
+    object-fit: contain; 
+  }
+  
+  
+  
+  .partie1 h1{
+    width: 400px;
+    font-size: 60px
+  }
+  .partie1 p{
+    width: 500px;
+    font-size: 20px;
+  
+}
+.slick-prev:before, .slick-next:before{
+    display: none;
+}
+
+
+
+
+
+
+section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color:black;
+}
+
+.heading span{
+    background:rgb(226, 66, 151);
+    color:#fff;
+    display: inline-block;
+    padding:.5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border:.2rem solid black;
+    color:black;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    background:rgb(226, 66, 151);
+    color:#fff;
+}
+
+/* categories */
+
+.categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap:1.5rem;
+}
+
+.categories .box-container .box{
+    padding:3rem 2rem;
+    border-radius: .5rem;
+    background:#fff;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);;
+    outline:.1rem solid rgba(0,0,0,.1);
+    outline-offset: -1rem;
+    text-align: center;
+}
+
+.categories .box-container .box:hover{
+    outline:.2rem solid black;
+    outline-offset: 0rem;
+}
+
+.categories .box-container .box img{
+    margin:1rem 0;
+    height:15rem;
+}
+
+.categories .box-container .box h3{
+   font-size: 2rem;
+   color:black;
+   line-height: 1.8;
+}
+
+.categories .box-container .box p{
+    font-size: 1.7rem;
+    color:rgb(226, 66, 151);
+    line-height: 1.8;
+    padding:1rem 0;
+}
+/* produits */
+
+
+
+.products .product-slider{
+    padding:1rem;
+}
+
+.products .product-slider:first-child{
+    margin-bottom: 2rem;
+}
+
+.products .product-slider .box{
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding:3rem 2rem;
+    outline-offset: -1rem;
+    outline: .1rem solid rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    transition: .2s linear;
+}
+
+.products .product-slider .box:hover{
+    outline-offset: 0rem;
+    outline: .2rem solid black;
+}
+
+.products .product-slider .box img{
+    height:20rem;
+}
+
+.products .product-slider .box h3{
+    font-size: 2.5rem;
+    color:black;
+}
+
+.products .product-slider .box .price{
+    font-size: 2rem;
+    color:#666;
+    padding:.5rem 0;
+}
+
+.products .product-slider .box .stars i{
+    font-size: 1.7rem;
+    color:rgb(226, 66, 151);
+    padding:.5rem 0;
+}
+/* avis */
+
+
+.review .review-slider{
+    padding:1rem;
+}
+
+.review .review-slider .box{
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding:3rem 2rem;
+    outline-offset: -1rem;
+    outline:.1rem solid rgba(0,0,0,.1);
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    transition: .2s linear;
+}
+
+.review .review-slider .box:hover{
+    outline:.2rem solid black;
+    outline-offset: 0rem;
+}
+
+.review .review-slider .box img{
+    height:10rem;
+    width:10rem;
+    border-radius: 50%;
+}
+
+.review .review-slider .box p{
+    padding:1rem 0;
+    line-height: 1.8;
+    color:#666;
+    font-size: 1.5rem;
+}
+
+.review .review-slider .box h3{
+    padding-bottom: .5rem;
+    color:black;
+    font-size: 2.2rem;
+}
+
+.review .review-slider .box .stars i{
+    color:rgb(226, 66, 151);
+    font-size: 1.7rem;
+}
