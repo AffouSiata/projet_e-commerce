@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./details.css">
-    <link rel="stylesheet" href="./mm.css">
+    <!-- <link rel="stylesheet" href="./mm.css"> -->
     <title>Document</title>
 </head>
 <body>
@@ -34,18 +35,92 @@
         </div>
         <div class="detail1-text">
             <h3>Ognion</h3>
-            <h4>$4.99</h4>
+            <h4> 500f cfa / kilo</h4>
             <p>Les oignons aident à améliorer le système digestif, à normaliser le métabolisme eau-sel et à augmenter le tonus du corps 
                 et ont également un effet antiseptique et antimicrobien.En conséquence, les oignons doivent être consommés pendant un risque
                  accru d'attraper une infection virale (généralement automne-hiver-printemps).
             </p>
-            <div>
-                <input type="number">
+            <div class="numb">
+                <input type="number" value="1">
                 <a href="">Ajouter au panier</a>
             </div>
         </div>
     </section>
+
+    <section class="products" id="products">
+
+        <h1 class="heading"> Produits <span>connexes</span> </h1>   
+        <div class="swiper product-slider">
+    
+            <div class="swiper-wrapper">
+    
+                <div class="swiper-slide box">
+                    <img src="./encore/br.jpg" alt="">
+                    <h3>pois</h3>
+                    <div class="price"> 500f cfa - 1000f cfa / kilo </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="./encore/pi.png" alt="">
+                    <h3>piment</h3>
+                    <div class="price">  500f cfa - 1000f cfa / kilo</div>
+                </div>
+    
+                <div class="swiper-slide box">
+                    <img src="./encore/gin.npg.jpeg" alt="">
+                    <h3>Gingembre</h3>
+                    <div class="price">  500f cfa - 1000f cfa / kilo </div>    
+                </div>
+    
+                <div class="swiper-slide box">
+                    <img src="./encore/har.png" alt="">
+                    <h3>haricot noire</h3>
+                    <div class="price">  500f cfa - 1000f cfa / kilo </div>
+                </div>
+            </div>
+    
+        </div>
+
+    </section>
+
+
+    <footer class="pied">
+        <div class="premier">
+            <h4>Company</h4>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+        </div>
+        <div class="deuxieme">
+            <h4>Company</h4>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+        </div>
+        <div class="troisieme">
+            <h4>Company</h4>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+            <a href="">azerty</a>
+        </div>
+        <div class="quatrieme">
+            <h4>Company</h4>
+            <input type="email" placeholder="Votre email">
+            <a href="" class="btn">Envoyer</a>
+        </div>
+    </footer>
+    <div class="bas">
+        <div class="bas1">Frutta Verde © 2022 All Rights Reserved</div>
+        <div class="bas2">
+            <a href="">Privacy Policy</a> |
+            <a href="">Terms & Conditions</a> 
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/6b4a8ac2d2.js" crossorigin="anonymous"></script>
-    <script src="./mm.js"></script>
+    <script src="details.js"></script>
 </body>
 </html>

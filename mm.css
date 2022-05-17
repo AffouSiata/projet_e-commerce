@@ -59,8 +59,9 @@ header #menu{
 }
 header .navbar a{
     margin-left: 20px;
-    font-size: 30px;
-    color: #5d5a5a;;
+    font-size: 25px;
+    color: #272323;
+    font-family:Didot, serif ;
 }
 header .page1 a{
     font-size: 20px;
@@ -136,7 +137,7 @@ header .navbar a:hover{
     width: 100%;
     height: 700px;
     display: flex;
-    background-color:rgb(226, 66, 151) ;
+    background-color:rgb(229, 129, 182) ;
    
   }
   .partie1{
@@ -146,7 +147,7 @@ header .navbar a:hover{
     flex-direction: column;
     justify-content: space-evenly;
     padding: 30px 10% 30px 70px;
-    background-color:rgb(226, 66, 151) ;
+    background-color:rgb(229, 129, 182) ;
   }
   .partie2{
     width: 50%;
@@ -207,10 +208,10 @@ section{
     padding:.8rem 3rem;
     font-size: 1.7rem;
     border-radius: .5rem;
-    border:.2rem solid black;
-    color:black;
+    border:.2rem solid rgb(226, 66, 151);
+    color:rgb(226, 66, 151);
     cursor: pointer;
-    background: none;
+    background:white;
 }
 
 .btn:hover{
@@ -237,7 +238,7 @@ section{
 }
 
 .categories .box-container .box:hover{
-    outline:.2rem solid black;
+    outline:.2rem solid rgb(226, 66, 151);
     outline-offset: 0rem;
 }
 
@@ -254,7 +255,7 @@ section{
 
 .categories .box-container .box p{
     font-size: 1.7rem;
-    color:rgb(226, 66, 151);
+    color:#666;
     line-height: 1.8;
     padding:1rem 0;
 }
@@ -283,7 +284,7 @@ section{
 
 .products .product-slider .box:hover{
     outline-offset: 0rem;
-    outline: .2rem solid black;
+    outline:.2rem solid rgb(226, 66, 151);
 }
 
 .products .product-slider .box img{
@@ -325,7 +326,7 @@ section{
 }
 
 .review .review-slider .box:hover{
-    outline:.2rem solid black;
+    outline:.2rem solid rgb(226, 66, 151);
     outline-offset: 0rem;
 }
 
@@ -351,4 +352,32 @@ section{
 .review .review-slider .box .stars i{
     color:rgb(226, 66, 151);
     font-size: 1.7rem;
+}
+.pied{
+    margin-top: 50px;
+    height: 400px;
+    width: 100%;
+    background-color:rgba(218, 213, 213, 0.96) ;
+}
+.bas{
+    width: 100%;
+    height: 70px;
+    background-color:rgb(240, 144, 195) ;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+}
+.bas1{
+   color: #666;
+}
+.bas2 {
+    color: white; 
+ }
+.bas2 a{
+   color: white; 
+}
+.bas2 a:hover{
+    color: rgb(226, 66, 151);
 }

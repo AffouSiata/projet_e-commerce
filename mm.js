@@ -5,6 +5,11 @@ $('.partie2').slick({
     autoplaySpeed: 2000,
   });
 
+
+
+
+
+  
 let menu = document.querySelector('#menu')
 let navbar = document.querySelector('.navbar')
 
