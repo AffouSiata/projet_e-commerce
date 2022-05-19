@@ -351,50 +351,74 @@ section{
 
 
 .pied{
+    padding:1rem 9%;
     margin-top: 50px;
     height: 400px;
     width: 100%;
     background-color:rgb(240, 144, 195) ;
     display: flex;
-    padding: 100px;
+    /* padding: 100px; */
     justify-content: space-evenly;
-    
-
-   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
 }
-.premier,.deuxieme,.troisieme{
+.boxe{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* line-height: 2.4rem; */
+}
+.boxe h3{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 30px;
+    color: #373535;
+}
+.boxe p{
+    text-align: justify;
+    font-family:Didot, serif ;
+    color: #5d5a5a;
+}
+
+.pied .boxe .share a{
+    height:3.5rem ;
+    width: 3rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: black;
+    margin-right:2rem ;
+    background-color: #eee;
+    text-align: center;
+    margin-top: 30px;
+    font-family:Didot, serif ;
+}
+
+.pied .boxe .share a:hover{
+    background: rgb(226, 66, 151);
+    color: #fff;
+}
+.pied .boxe .links:hover{
+    color:rgb(226, 66, 151) ;
 }
 h4{
     font-size: 30px;
     color: #666;
+    font-size: 2.5rem;
+    padding:1rem 0;
 
 }
-a{
+.boxe a{
     font-size: 20px;
     line-height: 40px;
     color: #FFF;
     text-align: center;
+    transition: all .2s ease-out;
     /* padding-left: 20px; */
-}
+}   
 
-.quatrieme{
-    display: flex;
-    flex-direction: column;
-}
-.quatrieme input{
-    width: 300px;
-    height: 50px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 22px;
-}
-.quatrieme a{
-    width: 200px;
-}
 
 .bas{
     width: 100%;

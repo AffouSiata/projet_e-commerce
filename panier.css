@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .2s ease-out;
+    font-family: 'Roboto Condensed', sans-serif
+}
+html{
+    font-size: 75%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background: #eee;
+}
+/* header */
+ .pail{
+    background-color: rgb(226, 66, 151);
+}
+.container{
+    position: relative;
+   
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 7%;
+    position: relative;
+    z-index: 1000;
+    /* background-color: white; */
+    border-radius: 5px; 
+    box-shadow: 0 .5rem  1rem rgba(0, 0, 0, .2);
+    font-family: 'Raleway', sans-serif;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; */
+}
+header .logo{
+    font-size: 44px;
+    color: #5d5a5a;;
+    font-family: 'Permanent Marker', cursive;
+}
+header .logo span{
+     color:  white;
+     font-family: 'Raleway', sans-serif;
+}
+header #menu{
+    display: none; 
+    padding: 10px 10px;
+    border: 2px solid rgba(0, 0, 0,.2);
+    font-size: 20px;
+    border-radius: 5px;
+    color: #5d5a5a;;
+}
+header .navbar a{
+    margin-left: 20px;
+    font-size: 25px;
+    color: #272323;
+    font-family:Didot, serif ;
+}
+header .page1 a{
+    font-size: 20px;
+    color:  rgb(226, 66, 151);
+
+}
+.barre{
+    width: 400px;
+    background-color: white;
+    border-radius: 30px;
+    
+}
+.barre input{
+    width: 350px;
+    /* border: 1px solid black; */
+    padding: 10px;
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: 25px;
+}
+.barre i{
+    font-size: 1.3rem;
+    color: white;
+    border: 1px solid rgb(226, 66, 151);
+    padding: 7px;
+    border-radius: 50%;
+    background-color:rgb(226, 66, 151); ;
+
+} 
+
+header .page1 i{
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #FFF;
+}
+header .navbar a:hover{
+    background-color:rgb(226, 66, 151); 
+    padding: 15px;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+@media (max-width:768px) {
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #FFF;
+        border-top: 1px solid rgba(0, 0, 0,.2);
+        border-bottom: 1px solid rgba(0, 0, 0,.2); 
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+
+    }
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%,  0 100% );
+    } 
+    header .navbar a{
+        font-size: 30px;
+        display: block;
+        text-align: center; 
+        margin: 2rem 0;
+        color: rgb(146, 142, 142);
+    }
+
+    header #menu{
+        display: initial;
+    }
+    
+    
+}
+.panier{
+    padding: 2rem 6%;
+    /* height: 600px; */
+    display: flex;
+    width: 100%;
+    /* background-color: aquamarine; */
+    
+}
+.panier1{
+    height: 200px;
+    width:60%;
+    margin-right: 10px;
+    background-color: #FFF;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    
+}
+.panier1 img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    background-color: #eee;
+    padding: 40px;
+}
+.panier1 h4{
+    font-size: 20px;
+    margin: 60px;
+    color: #666;
+}
+.panier1 p{
+    font-size: 20px;
+    margin: 60px;
+    color: #666;
+    
+}
+.panier1  i{
+    font-size: 20px;
+    margin: 60px;
+    color: rgb(226, 66, 151);
+}
+.panier1 input{
+    height: 50px;
+    color: #666;
+    width: 80px;
+    text-align: center;
+    margin-right: 20px;
+    border: 1px solid rgb(225, 218, 218);
+    font-weight: bold;
+    font-size: 15px;
+    margin: 60px;
+}
+.panier2{
+    /* border: 1px solid black; */
+    height: 450px;
+    width: 25%;
+    background-color: white; 
+    box-shadow: 0 .5rem 1.5rem rgba(7, 5, 5, 0.1);
+    font-size: 17px;
+    color: #666;
+}
+
+.fac{
+    display: flex;
+    margin: 60px;
+    justify-content: space-between;
+}
+.fac h6{
+    color: #666;
+}
+.fac a{
+    color: #272323;
+    font-size: 16px;
+}
+.fac a:hover{
+    color:rgb(226, 66, 151);
+}
+.btn{
+    border: .2rem solid rgb(226, 66, 151);
+    background-color: white;
+    padding: 10px;
+    margin-left: 30%;
+    border-radius: .5rem;
+    color:rgb(226, 66, 151);
+    
+}
+.btn:hover{
+    background-color: rgb(226, 66, 151);
+    color:white;
+    transition: 0.4 ease-in;
+}
+.commande{
+    padding: 10px;
+    border: .2rem solid rgb(226, 66, 151);
+    background-color: white;
+    font-size: 25px;
+    margin-left: 30%;
+    border-radius: .5rem;
+    color: rgb(226, 66, 151);
+}
+.commande:hover{
+    background-color: rgb(226, 66, 151);
+    color: #FFF;
+}

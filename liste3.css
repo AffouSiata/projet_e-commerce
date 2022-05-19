@@ -133,6 +133,7 @@ header .navbar a:hover{
     
 }
 
+
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -149,6 +150,7 @@ header .navbar a:hover{
     background:rgb(226, 66, 151);
     color:#fff;
 }
+
 
 
 .titre {
@@ -196,12 +198,13 @@ header .navbar a:hover{
 
 .liste .liste-container .legumes h3{
     color: rgb(86, 82, 82);
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.8rem;
 }
 
+
 .liste .liste-container .legumes .price{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color:#666;
     padding:.5rem 0;
 }
@@ -211,6 +214,10 @@ header .navbar a:hover{
     color:rgb(226, 66, 151);
     padding:.5rem 0;
 }
+
+
+
+
 
 
 .pied{
@@ -280,7 +287,7 @@ h4{
     text-align: center;
     transition: all .2s ease-out;
     /* padding-left: 20px; */
-}   
+}  
 
 .bas{
     width: 100%;

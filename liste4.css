@@ -133,6 +133,7 @@ header .navbar a:hover{
     
 }
 
+
 .btn{
     margin-top: 1rem;
     display: inline-block;
@@ -196,12 +197,16 @@ header .navbar a:hover{
 
 .liste .liste-container .legumes h3{
     color: rgb(86, 82, 82);
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.8rem;
 }
 
+
+
+
+
 .liste .liste-container .legumes .price{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color:#666;
     padding:.5rem 0;
 }
@@ -211,6 +216,33 @@ header .navbar a:hover{
     color:rgb(226, 66, 151);
     padding:.5rem 0;
 }
+
+
+
+.bas{
+    width: 100%;
+    height: 70px;
+    background-color:rgb(226, 66, 151);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    bottom:0 ;
+}
+.bas1{
+   color: #666;
+}
+.bas2 {
+    color: white; 
+ }
+.bas2 a{
+   color: white; 
+}
+.bas2 a:hover{
+    color: black;
+}
+
 
 
 .pied{
@@ -281,27 +313,3 @@ h4{
     transition: all .2s ease-out;
     /* padding-left: 20px; */
 }   
-
-.bas{
-    width: 100%;
-    height: 70px;
-    background-color:rgb(226, 66, 151);
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 30px;
-    font-size: 20px;
-    bottom:0 ;
-}
-.bas1{
-   color: #666;
-}
-.bas2 {
-    color: white; 
- }
-.bas2 a{
-   color: white; 
-}
-.bas2 a:hover{
-    color: black;
-}

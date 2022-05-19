@@ -149,7 +149,7 @@ header .navbar a:hover{
     height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+     justify-content: space-around; 
     padding: 30px 10% 30px 70px;
     background-color:rgb(229, 129, 182) ;
   }
@@ -168,13 +168,33 @@ header .navbar a:hover{
   
   
   .partie1 h1{
-    width: 400px;
-    font-size: 60px
+    margin-top: 30px;
+    width: 800px;
+    font-size: 5rem;
+    color:white;
+    font-family: American Typewriter, serif;
+    
   }
   .partie1 p{
-    width: 500px;
+    width: 750px;
+    font-size: 25px;
+    font-family: DejaVu Sans Mono, monospace;
+    color: #666;
+}
+.partie1 button{
+    width: 250px;
+   line-height: 70px;
     font-size: 20px;
-  
+    border-radius: .5rem;
+    border:.2rem solid rgb(226, 66, 151);
+    outline: 1px solid rgb(169, 165, 165);
+    outline-offset: -1rem;
+
+}
+.partie1 button:hover{
+    outline-offset: 0;
+    color: #FFF;
+    background-color: rgb(226, 66, 151);
 }
 .slick-prev:before, .slick-next:before{
     display: none;
@@ -301,7 +321,7 @@ section{
 }
 
 .products .product-slider .box .price{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color:#666;
     padding:.5rem 0;
 }
@@ -358,50 +378,74 @@ section{
     font-size: 1.7rem;
 }
 .pied{
+    padding:1rem 9%;
     margin-top: 50px;
     height: 400px;
     width: 100%;
     background-color:rgb(240, 144, 195) ;
     display: flex;
-    padding: 100px;
+    /* padding: 100px; */
     justify-content: space-evenly;
-    
-
-   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
 }
-.premier,.deuxieme,.troisieme{
+.boxe{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* line-height: 2.4rem; */
+}
+.boxe h3{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 30px;
+    color: #373535;
+}
+.boxe p{
+    text-align: justify;
+    font-family:Didot, serif ;
+    color: #5d5a5a;
+}
+
+.pied .boxe .share a{
+    height:3.5rem ;
+    width: 3rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: black;
+    margin-right:2rem ;
+    background-color: #eee;
+    text-align: center;
+    margin-top: 30px;
+    font-family:Didot, serif ;
+}
+
+.pied .boxe .share a:hover{
+    background: rgb(226, 66, 151);
+    color: #fff;
+}
+.pied .boxe .links:hover{
+    color:rgb(226, 66, 151) ;
 }
 h4{
     font-size: 30px;
     color: #666;
+    font-size: 2.5rem;
+    padding:1rem 0;
 
 }
-a{
+.boxe a{
     font-size: 20px;
     line-height: 40px;
     color: #FFF;
     text-align: center;
+    transition: all .2s ease-out;
     /* padding-left: 20px; */
-}
+}   
 
-.quatrieme{
-    display: flex;
-    flex-direction: column;
-}
-.quatrieme input{
-    width: 300px;
-    height: 50px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 22px;
-}
-.quatrieme a{
-    width: 200px;
-}
 
 .bas{
     width: 100%;
