@@ -32,15 +32,14 @@
     <div class="titre">
         <h1> Liste des <span>légumes</span></h1>
     </div>
-
     <div class="liste">
         <div class="liste-container">
-            <% if (article) { %>
-                <% article.forEach(function(article){ %>
+            <% if (resultat) { %>
+                <% resultat.forEach(function(resultat){ %>
                 <div class="legumes">
-                    <img src="<%=article.image_Article %>" alt="">
-                    <h3><%= article.nom %></h3>
-                    <div class="price"> <%=article.prixArticle %> cfa </div>
+                    <img src="<%=resultat.image_Article %>" alt="">
+                    <h3><%= resultat.nomArticle %></h3>
+                    <div class="price"> <%=resultat.prixArticle %> cfa </div>
                         <div class="stars">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>

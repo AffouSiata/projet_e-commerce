@@ -138,15 +138,26 @@ header .navbar a:hover{
     
     
 }
-.commande{
-    padding: 2rem 6%;
+.final{
     display: flex;
+    padding: 2rem 0 0 ;
+    justify-content: space-around;
+}
+.final h3{
+    font-size: 25px;
+    color: #5d5a5a;
+}
+.commande{
+    
+    padding: 2rem 9% ;
+    display: flex;
+    width: 100%;
 }
 .commande1{
     /* border: 1px solid black; */
-    height: 800px;
+    height: 700px;
     width: 60%;
-    background-color: #FFF;
+    background-color: white;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
    
 }
@@ -160,40 +171,284 @@ header .navbar a:hover{
     width: 20px;
     line-height: 20px;
     display: inline-block;
-    background-color: #e2e2e2;
+    background-color: #a9a4a4;
     color: #fff;
     text-align: center;
     border-radius: 50%;
     font-weight: 700;
+    font-size: 20px;
 }
 .haut span{
     color: #000;
     padding-left: 16px;
     font-weight: bold;
+    font-size: 20px;
+}
+.formulaire{
+    padding: 3rem ;
 }
 form{
+    margin: 0px 0 32px 0;
 }
-label{
-    display: inline-block;
-    max-width: 100%;
-    line-height: 20px;
+form .input-box{
+    display: flex;
+    justify-content: space-between;
+    
 }
-form input{
-    font-family: Roboto,Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857;
-    background: #fff;
-    color: #000;
+.input-box .box{
+    margin: 20px 0 12px 0px; 
+    width: calc(100% / 2 - 20px );
+}
+form .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 7px 10px;
-    /* width: 50%!important;
-    height: auto!important; */
+    font-size: 15px;
+    padding: 10px;
+    color: #000;
+    
 }
+form .input-box label{
+    font-size: 20px;
+    color: #666;
+}
+form .input-box textarea{
+    border: 1px solid #ccc;
+}
+form .input-box1 .bose{
+    display: flex;
+    margin: 10px 0  0 0;
+
+}
+form .input-box1 label{
+    font-size: 20px;
+    color: #666;
+}
+form .input-box1 .bose p{
+    border: 1px solid rgb(209, 204, 204);
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+form .input-box1 .bose input{
+    height: 45px;
+    width: 850px;
+    margin-left: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+}
+form .input-box2{
+    margin: 20px 0 0 0;
+}
+form .input-box2 label{
+   font-size: 20px;
+   color: #666;
+}
+form .input-box2 textarea{
+    margin-top: 10px;
+   width: 100%;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+form .input-box3 label{
+    font-size: 20px;
+    color: #666;
+}
+form .input-box3 select{
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 45px;
+    font-size: 15px;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border:.2rem solid rgb(226, 66, 151);
+    color:rgb(226, 66, 151);
+    cursor: pointer;
+    background:white;
+    width: 100%;
+    text-align: center;
+}
+.btn:hover{
+    background:rgb(226, 66, 151);
+    color:#fff;
+}
+
 .commande2{
-    /* border: 1px solid red; */
-    height: 800px;
+   
+    height: 400px;
     width: 40%;
     margin-left: 20px;
     background-color: #FFF;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+.com1{
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.com1 span{
+    color: #000;
+    padding-left: 16px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.com2{
+    line-height: 150px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.com2 img{
+    background-color: transparent;
+    height: 130px;
+    width: 180px;
+    object-fit: cover;
+}
+.com2 h3{
+    font-size: 15px;
+}
+.com2 h4{
+    font-size: 15px;
+   color: rgb(226, 66, 151); 
+}
+.com2 p{
+    font-size: 16px; 
+}
+.com2 p span{
+    color: rgb(226, 66, 151); 
+    font-weight: bold;
+    font-size: 16px;
+} 
+.com3{
+    line-height: 80px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #f0f0f0;
+}
+.com3 h4{
+    font-size: 20px;
+}
+.com3 p{
+    color: rgb(226, 66, 151); 
+    font-weight: bold;
+    font-size: 15px;
+}
+.lien {
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    line-height: 50px;
+    color:rgb(226, 66, 151);
+    cursor: pointer;
+    background:white;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+.pied{
+    padding:1rem 9%;
+    margin-top: 50px;
+    height: 400px;
+    width: 100%;
+    background-color:rgb(240, 144, 195) ;
+    display: flex;
+    /* padding: 100px; */
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+.boxe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 2.4rem; */
+}
+.boxe h3{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 30px;
+    color: #373535;
+}
+.boxe p{
+    text-align: justify;
+    font-family:Didot, serif ;
+    color: #5d5a5a;
+}
+
+.pied .boxe .share a{
+    height:3.5rem ;
+    width: 3rem;
+    line-height: 4rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: black;
+    margin-right:2rem ;
+    background-color: #eee;
+    text-align: center;
+    margin-top: 30px;
+    font-family:Didot, serif ;
+}
+
+.pied .boxe .share a:hover{
+    background: rgb(226, 66, 151);
+    color: #fff;
+}
+.pied .boxe .links:hover{
+    color:rgb(226, 66, 151) ;
+}
+h4{
+    font-size: 30px;
+    color: #666;
+    font-size: 2.5rem;
+    padding:1rem 0;
+
+}
+.boxe a{
+    font-size: 20px;
+    line-height: 40px;
+    color: #FFF;
+    text-align: center;
+    transition: all .2s ease-out;
+    
+}   
+
+.bas{
+    width: 100%;
+    height: 70px;
+    background-color:rgb(226, 66, 151);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    bottom:0 ;
+}
+.bas1{
+   color: #666;
+}
+.bas2 {
+    color: white; 
+ }
+.bas2 a{
+   color: white; 
+}
+.bas2 a:hover{
+    color: black;
 }

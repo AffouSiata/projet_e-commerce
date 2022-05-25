@@ -15,7 +15,7 @@ const control = class{
     static liste1 =(req=request,res=response)=>{
         data.liste(req.params.id).then(resultat=>{
             // console.log("erererere",resultat);
-            res.render('liste1');
+            res.render('liste1',{resultat:resultat});
 
         })
         .catch(error =>{
@@ -49,6 +49,9 @@ const control = class{
     }
     static commande =(req=request,res=response)=>{
         res.render('commande')
+    }
+    static admin =(req=request,res=response)=>{
+        res.render('admin')
     }
 
 

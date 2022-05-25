@@ -15,6 +15,7 @@ router.get('/details',control.details);
 router.get('/panier',control.panier);
 router.get('/commande',control.commande);
 router.get('/conn',control.connexion);
+router.get('/admin',control.admin);
 
 
 

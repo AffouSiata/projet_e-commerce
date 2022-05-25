@@ -35,6 +35,8 @@ const data = class{
     
     )}
 
+    
+
     static liste =(id)=>{
         console.log("id",id);
         return new Promise((resolve,rejet)=>{
