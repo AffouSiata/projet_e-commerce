@@ -30,23 +30,29 @@
             </header>
         </div>
     </div>
-    <section class="details">
-        <div class="detail1-image">
-            <img src="../public/images/m5.png" alt="">
-        </div>
-        <div class="detail1-text">
-            <h3>Ognion</h3>
-            <h4> 500f cfa / kilo</h4>
-            <p>Les oignons aident à améliorer le système digestif, à normaliser le métabolisme eau-sel et à augmenter le tonus du corps 
-                et ont également un effet antiseptique et antimicrobien.En conséquence, les oignons doivent être consommés pendant un risque
-                 accru d'attraper une infection virale (généralement automne-hiver-printemps).
-            </p>
-            <div class="numb">
-                <input type="number" value="1">
-                <a href="/panier">Ajouter au panier</a>
+
+    <% resultat.forEach(function(resultat){ %>
+        <section class="details">
+            <div class="detail1-image">
+                <img src="<%=resultat.image_Article %>" alt="">
             </div>
-        </div>
-    </section>
+            <div class="detail1-text">
+                <h3><%=resultat.nomArticle %></h3>
+                <h4><%=resultat.prixArticle %> cfa / kilo</h4>
+                <p>
+                    <%=resultat.description %>
+                    <!-- Les oignons aident à améliorer le système digestif, à normaliser le métabolisme eau-sel et à augmenter le tonus du corps 
+                    et ont également un effet antiseptique et antimicrobien.En conséquence, les oignons doivent être consommés pendant un risque
+                    accru d'attraper une infection virale (généralement automne-hiver-printemps). -->
+                </p>
+                <div class="numb">
+                    <input type="number" value="1">
+                    <a href="/panier">Ajouter au panier</a>
+                </div>
+            </div>
+        </section>
+
+        <% }); %>
 
     <section class="products" id="products">
 
@@ -54,13 +60,14 @@
         <div class="swiper product-slider">
     
             <div class="swiper-wrapper">
-    
-                <div class="swiper-slide box">
-                    <img src="../public/encore/br.jpg" alt="">
-                    <h3>pois</h3>
-                    <div class="price"> 500f cfa - 1000f cfa / kilo </div>
-                </div>
-                <div class="swiper-slide box">
+                <% result.forEach(function(resultat){ %>
+                    <div class="swiper-slide box">
+                        <img src="<%=resultat.image_Article %>" alt="">
+                        <h3><%=resultat.nomArticle %></h3>
+                        <div class="price"> <%=resultat.prixArticle %> cfa / kilo </div>
+                    </div>
+                <% }); %>
+                <!-- <div class="swiper-slide box">
                     <img src="../public/encore/pi.png" alt="">
                     <h3>piment</h3>
                     <div class="price">  500f cfa - 1000f cfa / kilo</div>
@@ -76,7 +83,8 @@
                     <img src="../public/encore/har.png" alt="">
                     <h3>haricot noire</h3>
                     <div class="price">  500f cfa - 1000f cfa / kilo </div>
-                </div>
+                </div>  -->
+                
             </div>
     
         </div>

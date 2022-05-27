@@ -5,9 +5,23 @@ const  connect  = require("../database/bd");
 
 const data = class{
 
-    static article =()=>{
+    static article1 =()=>{
         return new Promise((resolve,rejet)=>
-        connect.query('SELECT * FROM article',function(error,resultat){
+        connect.query('SELECT * FROM categories inner join article on categories.id= article.id_categorie  where categories.nom = ? or categories.nom =?',["legumes","fruits"],function(error,resultat){
+            if(error){
+                rejet(error);
+                console.log("erreur");
+            }
+            else{
+                resolve(resultat);
+                console.log("bien enregistre");
+            }
+        })
+      
+    )}
+    static article2 =()=>{
+        return new Promise((resolve,rejet)=>
+        connect.query('SELECT * FROM categories inner join article on  categories.id =  article.id_categorie  where categories.nom = ? or categories.nom =?',["les produits laitiers","viande fraîche"],function(error,resultat){
             if(error){
                 rejet(error);
                 console.log("erreur");
@@ -36,11 +50,30 @@ const data = class{
     )}
 
     
+   
 
     static liste =(id)=>{
         console.log("id",id);
         return new Promise((resolve,rejet)=>{
-            connect.query('SELECT * FROM  article WHERE id_categorie=?',[id],function(error,resultat){
+            // connect.query('SELECT * FROM  article as at inner join categories as cat on at.id_categorie = cat.id WHERE cat.id = ? ',[id],function(error,resultat){
+                connect.query(' SELECT * FROM article  where id_categorie=?',[id],function(error,resultat){
+           
+                if(error){
+                    console.log("error");
+                    rejet(error);
+                }
+                else{
+                    // console.log("bien recu",resultat);
+                    resolve(resultat);
+                }
+            })
+        })
+        
+    }
+    static details =(id)=>{
+        console.log("id",id);
+        return new Promise((resolve,rejet)=>{
+            connect.query('SELECT * FROM  article where id=? ',[id],function(error,resultat){
                 if(error){
                     console.log("error");
                     rejet(error);
@@ -53,11 +86,12 @@ const data = class{
         })
         
     }
-      
+    
         
 
 }
 module.exports=data;
+
 
 
 

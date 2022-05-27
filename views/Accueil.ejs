@@ -107,11 +107,12 @@
         <div class="swiper product-slider">
     
             <div class="swiper-wrapper">
-    
+                
+                <% article1.forEach(function(article1){ %>
                 <div class="swiper-slide box">
-                    <img src="../public/encore/product1.png" alt="">
-                    <h3>orange fraîche</h3>
-                    <div class="price"> 500f cfa - 1000f cfa </div>
+                    <img src="<%=article1.image_Article %>" alt="">
+                    <h3><%=article1.nomArticle %></h3>
+                    <div class="price"> <%=article1.prixArticle %> cfa </div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -119,9 +120,16 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <a href="/details" class="btn">Ajouter au panier</a>
+                    <a href="/details/<%=article1.id %>" class="btn">Ajouter au panier</a>
                 </div>
-                <div class="swiper-slide box">
+
+                <% }); %>
+
+
+
+
+
+                <!-- <div class="swiper-slide box">
                     <img src="  ../public/encore/product3.png" alt="">
                     <h3>oignon frais</h3>
                     <div class="price">  500f cfa - 1000f cfa</div>
@@ -188,7 +196,7 @@
                         <i class="fas fa-star-half-alt"></i>
                     </div>
                     <a href="/details" class="btn">Ajouter au panier</a>
-                </div>
+                </div> -->
             </div>
     
         </div>
@@ -196,21 +204,27 @@
         <div class="swiper product-slider">
     
             <div class="swiper-wrapper">
-    
-                <div class="swiper-slide box">
-                    <img src="../public/encore/product4.png" alt="">
-                    <h3>orange fraîche</h3>
-                    <div class="price">  500f cfa - 1000f cfa </div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                <% article2.forEach(function(article2){ %>
+                    <div class="swiper-slide box">
+                        <img src="<%=article2.image_Article %>" alt="">
+                        <h3><%=article2.nomArticle %></h3>
+                        <div class="price"> <%=article2.prixArticle %> cfa  </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="/details/<%=article2.id %>" class="btn">Ajouter au panier</a>
                     </div>
-                    <a href="/details" class="btn">Ajouter au panier</a>
-                </div>
-                <div class="swiper-slide box">
+
+                    <% }); %>
+
+
+
+
+                <!-- <div class="swiper-slide box">
                     <img src="  ../public/encore/product-5.png" alt="">
                     <h3>pommes de terre fraîches</h3>
                     <div class="price">  500f cfa - 1000f cfa </div>
@@ -276,7 +290,7 @@
                         <i class="fas fa-star-half-alt"></i>
                     </div>
                     <a href="/details" class="btn">Ajouter au panier</a>
-                </div>
+                </div> -->
             </div>
     
         </div>
