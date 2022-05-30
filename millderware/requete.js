@@ -86,6 +86,21 @@ const data = class{
         })
         
     }
+    static adminInsert =(data)=>{
+        let { nomArticle , prixArticle,date_miseArticle, date_ajoutArticle,description} = data;
+        console.log("donneés",data);
+            let inserer = "INSERT INTO article ( nomArticle , prixArticle,date_miseArticle,date_ajoutArticle, description)VALUES(?,?,?,?,?)";
+                connect.query(inserer,[nomArticle , prixArticle,date_miseArticle, date_ajoutArticle, description],(error,resultat)=>{
+               if(error){
+                    console.log(error)
+                    return{erreur:error}
+               }
+               else{
+                    console.log(resultat);
+                    return{succes:resultat}
+               }
+           })   
+    }
     
         
 

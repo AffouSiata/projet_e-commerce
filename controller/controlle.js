@@ -65,9 +65,17 @@ const control = class{
     static commande =(req=request,res=response)=>{
         res.render('commande')
     }
+
     static admin =(req=request,res=response)=>{
         res.render('admin')
     }
+
+
+    static adminpost =(req=request,res=response)=>{
+        console.log("sdfghjk",req.body);
+        data.adminInsert(req.body)
+    }
+    
    
 
 

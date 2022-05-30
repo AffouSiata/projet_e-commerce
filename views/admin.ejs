@@ -29,6 +29,7 @@
         </div>
     </div>
     <div class="admin">
+        <div class="espaces"></div>
         <div class="gauche">
             <nav>
                 <ul><li><a href="">Liste des articles</a></li></ul>
@@ -38,9 +39,198 @@
             </nav>
         </div>
         <div class="droite">
-            
+            <table class="tableau">
+                <thead>
+                    <tr>
+                        <th>Images</th>
+                        <th>Nom</th>
+                        <th>Prix</th>
+                        <th>description</th>
+                        <th colspan="3" style="text-align: center; font-size: 30px;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                       <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                       <td><button class="btn2"  onclick="modale()">Modifier</button></td>
+                        <td> <a class="btn3" href="">Supprimer</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+
+                        <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                        <td><button class="btn2"  onclick="modale()">Modifier</button></td>
+                        <td> <a class="btn3" href="">Supprimer</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                       
+                        <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                        <td><button class="btn2"  onclick="modale()">Modifier</button></td>
+                        <td> <a class="btn3" href="">Supprimer</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                    
+                        <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                        <td><button class="btn2"  onclick="modale()">Modifier</button></td>
+                        <td> <a class="btn3" href="">Supprimer</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        
+                        <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                        <td><button class="btn2"  onclick="modale()">Modifier</button></td>
+                        <td> <a class="btn3" href="">Supprimer</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                       
+                       <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                       <td><button class="btn2"  onclick="modale()">Modifier</button></td>
+                        <td> <a class="btn3" href="">Supprimer</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        
+                        <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                        <td><button class="btn2"  onclick="modale()">Ajouter</button></td>
+                        <td> <a class="btn3" href="">Supprimer</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                       
+                        <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                        <td><button class="btn2"  onclick="modale()">Ajouter</button></td>
+                        <td> <a class="btn3" href="" onclick="">Supprimer</a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                        <td>azertyu</td>
+                       
+                        <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                       <!--<td><button class="btn1"  onclick="modale()">Ajouter</button></td> -->
+                       <td><button class="btn2"  onclick="modale()">Ajouter</button></td>
+                       <td> <a class="btn3" href="" >Supprimer</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+            <div class="monmodal">
+                <div class="modal">
+                  <div class="modalité">
+                    <h2>Ajouter vos articles</h2>
+                    <button onclick="fermer()"><i class="fas fa-times"></i></button>
+                  </div>
+                  <hr>
+                  
+                  <form action="/admin" method="post">
+                    <select name="id_categorie" id="">
+                        <option value="1">legumes</option>
+                        <option value="2">fruits</option>
+                        <option value="3">produits laitiers</option>
+                        <option value="4">viande fraîche</option>
+                    </select>
+                    <div class="modal1">
+                       
+                        <div>
+                            <input type="text"  name ="nomArticle" id="nom" placeholder="nom de l'article">
+                        </div>
+                        <div>
+                            <input type="text"  name ="prixArticle" id="prix" placeholder="le prix de l'article">
+                        </div>
+                        <div>
+                            <div><label for="">Date Mise à Jour: </label></div>
+                            <input type="date"  name ="date_miseArticle" id="date" placeholder="date de mise à jour">
+                        </div>
+                        <div>
+                            <div><label for="">Date Ajout: </label></div>
+                            <input type="date"  name ="date_ajoutArticle" id="date" placeholder="date d'ajout">
+                        </div>
+                    </div>
+
+                    <textarea name="description" id="" cols="76" rows="10"  placeholder="la descrption de l'article">
+
+                    </textarea>
+                    <br>
+                    <div class="modal2">
+                      <label class="custom-file-upload">
+                        <input type="file" id="telecharge" name="photo"/>
+                        <i class="fa fa-cloud-upload"></i> veuillez telecharger une image
+                    </label>
+                    </div><br><br>
+                   <!-- <a href="" type="submit" >Envoyer</a> -->
+                   <button class="btn">Envoyer</button>
+                  </form>
+                </div> 
+            </div>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/6b4a8ac2d2.js" crossorigin="anonymous"></script>
+    <script>
+        function fermer (){
+
+            let pageferme = document.querySelector('.modal')
+            let icon = document.querySelector('.espaces')
+            pageferme.style.display="none";
+            icon.style.display="none"
+        }
+
+
+
+
+        function modale(){
+
+            let affiche= document.querySelector('.modal')
+            let espace = document.querySelector('.espaces')
+            affiche.style.display =  "block"
+            espace.style.display="block"
+
+        }
+
+
+    </script>
 </body>
 </html>
+
+
+
