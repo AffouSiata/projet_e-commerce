@@ -20,7 +20,7 @@ db.connect((error)=>{
         app.use(express.json());
         app.use(express.urlencoded({ extended: true }))
         app.use('/public',express.static('public'));
-
+        app.use('/upload',express.static('upload'));
         app.use('/', routeuser);
 
     }

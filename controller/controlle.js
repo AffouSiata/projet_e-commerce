@@ -2,6 +2,7 @@ const express = require('express')
 const  connect  = require('../database/bd');
 const router =  express.Router();
 const data = require('../millderware/requete');
+const upload = require("../millderware/multer");
 
 const control = class{
     static Accueil = async(req=request,res=response)=>{
@@ -73,7 +74,14 @@ const control = class{
 
     static adminpost =(req=request,res=response)=>{
         console.log("sdfghjk",req.body);
-        data.adminInsert(req.body)
+        console.log("sdfghjk",req.file.path);
+        data.adminInsert(req.body,req.file).then(resultat =>{
+            res.render('admin',{resultat:resultat})
+        })
+        .catch(error =>{
+            console.log("erreur",error);
+        })
+       
     }
     
    

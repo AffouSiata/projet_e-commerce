@@ -4,6 +4,7 @@ const { connect } = require("../database/bd");
 const app =express();
 const control = require('../controller/controlle');
 const router =  express.Router();
+const upload = require("../millderware/multer");
 
 
 router.get('/',control.Accueil);
@@ -16,7 +17,7 @@ router.get('/panier',control.panier);
 router.get('/commande',control.commande);
 router.get('/conn',control.connexion);
 router.get('/admin',control.admin);
-router.post('/admin',control.adminpost);
+router.post('/admin',upload.single("image_Article"),control.adminpost);
 
 
 

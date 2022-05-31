@@ -50,17 +50,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>azertyu</td>
-                        <td>azertyu</td>
-                        <td>azertyu</td>
-                        <td>azertyu</td>
-                       <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
-                       <td><button class="btn2"  onclick="modale()">Modifier</button></td>
-                        <td> <a class="btn3" href="">Supprimer</a></td>
-                        
-                    </tr>
-                    <tr>
+                    <% if (resultat) { %>
+                        <% resultat.forEach(function(resultat){ %>
+                            <tr>
+                                <td><%= resultat.image_Article %></td>
+                                <td><%= resultat.nomArticle %></td>
+                                <td><%= resultat.prixArticle %></td>
+                                <td><%= resultat.description %></td>
+                            <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                            <td><button class="btn2"  onclick="modale()">Modifier</button></td>
+                                <td> <a class="btn3" href="">Supprimer</a></td>
+                                
+                            </tr>
+                        <% }); %>
+                    <% } %>
+                    <!-- <tr>
                         <td>azertyu</td>
                         <td>azertyu</td>
                         <td>azertyu</td>
@@ -147,7 +151,7 @@
                        <!--<td><button class="btn1"  onclick="modale()">Ajouter</button></td> -->
                        <td><button class="btn2"  onclick="modale()">Ajouter</button></td>
                        <td> <a class="btn3" href="" >Supprimer</a></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
 
@@ -163,7 +167,7 @@
                   </div>
                   <hr>
                   
-                  <form action="/admin" method="post">
+                  <form action="/admin" method="post" enctype="multipart/form-data">
                     <select name="id_categorie" id="">
                         <option value="1">legumes</option>
                         <option value="2">fruits</option>
@@ -176,7 +180,7 @@
                             <input type="text"  name ="nomArticle" id="nom" placeholder="nom de l'article">
                         </div>
                         <div>
-                            <input type="text"  name ="prixArticle" id="prix" placeholder="le prix de l'article">
+                            <input type="number"  name ="prixArticle" id="prix" placeholder="le prix de l'article">
                         </div>
                         <div>
                             <div><label for="">Date Mise à Jour: </label></div>
@@ -194,7 +198,7 @@
                     <br>
                     <div class="modal2">
                       <label class="custom-file-upload">
-                        <input type="file" id="telecharge" name="photo"/>
+                        <input type="file" id="telecharge" name="image_Article"/>
                         <i class="fa fa-cloud-upload"></i> veuillez telecharger une image
                     </label>
                     </div><br><br>

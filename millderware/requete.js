@@ -85,22 +85,29 @@ const data = class{
             })
         })
         
+    } 
+
+
+    static adminInsert =(data,photo)=>{
+        let { nomArticle , prixArticle, date_ajoutArticle, date_miseArticle,description,id_categorie} = data;
+        return new Promise((resolve,rejet)=>{
+            console.log("donneés",data);
+            console.log("ppppppp",photo.path);
+                let inserer = "INSERT INTO article ( nomArticle , prixArticle,date_ajoutArticle, date_miseArticle, description,id_categorie,image_Article)VALUES(?,?,?,?,?,?,?)";
+                    connect.query(inserer,[nomArticle , prixArticle, date_ajoutArticle, date_miseArticle,description,id_categorie,photo.path],(error,resultat)=>{
+                if(error){
+                        console.log(error)
+                        rejet(error)
+                }
+                else{
+                        console.log(resultat);
+                        resolve(resultat)
+                }
+            
+                }) 
+        })   
     }
-    static adminInsert =(data)=>{
-        let { nomArticle , prixArticle,date_miseArticle, date_ajoutArticle,description} = data;
-        console.log("donneés",data);
-            let inserer = "INSERT INTO article ( nomArticle , prixArticle,date_miseArticle,date_ajoutArticle, description)VALUES(?,?,?,?,?)";
-                connect.query(inserer,[nomArticle , prixArticle,date_miseArticle, date_ajoutArticle, description],(error,resultat)=>{
-               if(error){
-                    console.log(error)
-                    return{erreur:error}
-               }
-               else{
-                    console.log(resultat);
-                    return{succes:resultat}
-               }
-           })   
-    }
+   
     
         
 
