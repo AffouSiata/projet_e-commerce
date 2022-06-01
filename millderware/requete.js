@@ -90,24 +90,36 @@ const data = class{
 
     static adminInsert =(data,photo)=>{
         let { nomArticle , prixArticle, date_ajoutArticle, date_miseArticle,description,id_categorie} = data;
-        return new Promise((resolve,rejet)=>{
             console.log("donneés",data);
             console.log("ppppppp",photo.path);
                 let inserer = "INSERT INTO article ( nomArticle , prixArticle,date_ajoutArticle, date_miseArticle, description,id_categorie,image_Article)VALUES(?,?,?,?,?,?,?)";
                     connect.query(inserer,[nomArticle , prixArticle, date_ajoutArticle, date_miseArticle,description,id_categorie,photo.path],(error,resultat)=>{
                 if(error){
                         console.log(error)
-                        rejet(error)
+                        return({error:error})
                 }
                 else{
                         console.log(resultat);
-                        resolve(resultat)
+                        resolve({resultat:resultat})
                 }
             
                 }) 
-        })   
+        
     }
-   
+   static adminaffiche =()=>{
+    return new Promise((resolve,rejet)=>{
+            connect.query(' SELECT * FROM article ',function(error,resultat){
+       
+            if(error){
+                console.log("error");
+                rejet(error);
+            }
+            else{
+                resolve(resultat);
+            }
+        })
+    })
+   }
     
         
 

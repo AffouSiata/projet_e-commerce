@@ -68,21 +68,24 @@ const control = class{
     }
 
     static admin =(req=request,res=response)=>{
-        res.render('admin')
+        data.adminaffiche() .then(resultat=>{
+            res.render('admin',{resultat})
+            //  res.json(resultat)
+            //  console.log("rrrrrrrr",resultat);
+         })
+         .catch(error=>{
+             console.log("erreru",error);
+         })
     }
 
 
-    static adminpost =(req=request,res=response)=>{
+    static adminpost =async(req=request,res=response)=>{
         console.log("sdfghjk",req.body);
         console.log("sdfghjk",req.file.path);
-        data.adminInsert(req.body,req.file).then(resultat =>{
-            res.render('admin',{resultat:resultat})
-        })
-        .catch(error =>{
-            console.log("erreur",error);
-        })
-       
+        data.adminInsert(req.body,req.file)
+
     }
+    
     
    
 

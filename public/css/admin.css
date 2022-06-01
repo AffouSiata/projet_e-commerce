@@ -28,14 +28,15 @@ body{
 
 
 header{
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 30px 7%;
-    position: relative;
+    /* position: relative; */
     z-index: 1000;
-    /* background-color: white; */
+    background-color: rgb(226, 66, 151);
     border-radius: 5px; 
     box-shadow: 0 .5rem  1rem rgba(0, 0, 0, .2);
     font-family: 'Raleway', sans-serif;
@@ -144,7 +145,7 @@ header .navbar a:hover{
 }
 .espaces{
      position: absolute;  
-     top: 0;
+    top: 0;
     left: 0; 
     width: 100%;
     height: 100%;
@@ -154,41 +155,108 @@ header .navbar a:hover{
     display: none;
 }
 .gauche{
+    margin-top: 129px;
     position: fixed;
     height: 100%;
     width: 400px;
+    left: 0;
     background-color: rgb(226, 66, 151);
 }
-.gauche nav{
-    line-height: 130px;
+.gauche nav ul{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+   
 }  
 .gauche nav ul li {
-    border-top: 1px solid rgba(255, 255, 255, .1);
+    line-height: 100px;
+    /* border-top: 1px solid rgba(255, 255, 255, .1); */
     border-bottom: 1px solid black;
+    
+   
+}
+.gauche nav ul li a{
+    position: relative;
     text-align: center;
     font-size: 20px;
     transition: .4s;
+    padding-left: 4 0px;
+    display: block;
+    width: 100%;
  
 }
+
+.gauche nav ul  .feat-shows.shows{
+    display: block;
+}
+.gauche nav ul ul{
+    position: static;
+    display: none;
+
+}
+
+.gauche nav ul ul li{
+    line-height: 50px;
+    border-bottom : none ;
+}
+.gauche nav ul ul li a{
+    font-size: 17px;
+    color: white;
+    padding-left: 80px;
+}
+
 .gauche nav ul li a {
+    position: relative;
     color: #FFF;
 }
-.gauche nav ul li:hover a{
-    padding-left:45px;
+.gauche nav ul  li a span{
+    position: absolute;
+    top: 50px;
+    left: 80%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    transition: transform 0.4s;
 }
+.gauche nav ul li a span.rotate{
+    transform: translateX(-50%) rotate(-180deg);
+}
+
 .droite{
-    height: 85vh;
+    margin-top: 138px;
+    /* margin-left: 20px; */
     width:100%;
-    background-color: white
+
    
 }
+.ajout{
+    margin-left: 26%;
+    margin-top: 20px;
+    width:15%;
+    
+   
+}
+
+.ajout button{
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid rgb(226, 66, 151);
+    background-color: #FFF;
+    color: rgb(226, 66, 151);
+}
+
+.ajout button:hover{
+    background-color: rgb(226, 66, 151);
+    color: #FFF;
+}
+
 .tableau{
     border-collapse: collapse;
     min-width:1000px;
-    width: auto;
+  
     box-shadow: 0 5px 50px rgba(0, 0, 0, 0.15);
     /* cursor: pointer; */
-    margin: 100px auto;
+    margin:20px auto;
     border: 1px solid #ddd;
 }
 thead tr{
@@ -204,6 +272,9 @@ tbody tr,td,th{
     border: 1px solid #ddd;
     font-size: 15px;
 }
+.image{
+    width: 100px;
+}
 tbody tr:nth-child(even){
     background-color: #f3f3f3;
 }
@@ -215,6 +286,7 @@ tbody tr:nth-child(even){
     color: #FFF;
     border-radius:5px ;
     font-weight: bold;
+   
 }
 .btn2{
     background-color: green;

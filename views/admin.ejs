@@ -32,13 +32,41 @@
         <div class="espaces"></div>
         <div class="gauche">
             <nav>
+                <ul>
+                    <li><a href="">Liste des articles</a></li>
+                    <li>
+                        <a href="" class=" ">Liste des articles
+                            <span class="fas fa-caret-down first"></span>
+                        </a>
+                        <ul class="feat-shows ">
+                            <li><a href="">categories</a></li>
+                            <li><a href="">categories</a></li>
+                            <li><a href="">categories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Liste des articles</a></li>
+                </ul>
+                
+                <!-- <ul>
+                    <li>
+                        <a href="" class="liste">Liste des articles
+                            <span class="fas fa-caret-down first"></span>
+                        </a>
+                        <ul class="diff">
+                            <li><a href="">categories</a></li>
+                            <li><a href="">categories</a></li>
+                            <li><a href="">categories</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <ul><li><a href="">Liste des articles</a></li></ul>
-                <ul><li><a href="">Liste des articles</a></li></ul>
-                <ul><li><a href="">Liste des articles</a></li></ul>
-                <ul><li><a href="">Liste des articles</a></li></ul>
+                <ul><li><a href="">Liste des articles</a></li></ul> -->
             </nav>
         </div>
         <div class="droite">
+            <div class="ajout">
+                <button   onclick="modale()">Ajouter un article</button>
+            </div>
             <table class="tableau">
                 <thead>
                     <tr>
@@ -50,21 +78,25 @@
                     </tr>
                 </thead>
                 <tbody>
+
+
+
                     <% if (resultat) { %>
                         <% resultat.forEach(function(resultat){ %>
                             <tr>
-                                <td><%= resultat.image_Article %></td>
+                                <td><img src="<%= resultat.image_Article %>" class="image" alt=""></td>
                                 <td><%= resultat.nomArticle %></td>
                                 <td><%= resultat.prixArticle %></td>
                                 <td><%= resultat.description %></td>
-                            <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
+                            <!-- <td><button class="btn1"  onclick="modale()">Ajouter</button></td> -->
                             <td><button class="btn2"  onclick="modale()">Modifier</button></td>
-                                <td> <a class="btn3" href="">Supprimer</a></td>
+                            <td><a class="btn3" href="">Supprimer</a></td>
                                 
                             </tr>
                         <% }); %>
-                    <% } %>
-                    <!-- <tr>
+                    <% } %> 
+                    
+                     <!-- <tr>
                         <td>azertyu</td>
                         <td>azertyu</td>
                         <td>azertyu</td>
@@ -74,7 +106,8 @@
                         <td><button class="btn2"  onclick="modale()">Modifier</button></td>
                         <td> <a class="btn3" href="">Supprimer</a></td>
                         
-                    </tr>
+                    </tr> -->
+                    <!--
                     <tr>
                         <td>azertyu</td>
                         <td>azertyu</td>
@@ -149,9 +182,9 @@
                        
                         <td><button class="btn1"  onclick="modale()">Ajouter</button></td>
                        <!--<td><button class="btn1"  onclick="modale()">Ajouter</button></td> -->
-                       <td><button class="btn2"  onclick="modale()">Ajouter</button></td>
+                       <!-- <td><button class="btn2"  onclick="modale()">Ajouter</button></td>
                        <td> <a class="btn3" href="" >Supprimer</a></td>
-                    </tr> -->
+                    </tr> --> 
                 </tbody>
             </table>
 
@@ -209,30 +242,17 @@
             </div>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/6b4a8ac2d2.js" crossorigin="anonymous"></script>
     <script>
-        function fermer (){
 
-            let pageferme = document.querySelector('.modal')
-            let icon = document.querySelector('.espaces')
-            pageferme.style.display="none";
-            icon.style.display="none"
-        }
+        $('.liste-btn  ').click(function(){
+            $('.gauche nav ul .feat-shows').toggleClass("shows");
+            $('.gauche nav ul .first').toggleClass("rotate");
 
-
-
-
-        function modale(){
-
-            let affiche= document.querySelector('.modal')
-            let espace = document.querySelector('.espaces')
-            affiche.style.display =  "block"
-            espace.style.display="block"
-
-        }
-
-
+        });
     </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/6b4a8ac2d2.js" crossorigin="anonymous"></script>
+    <script src="../public/js/admin.js"></script>
 </body>
 </html>
 
