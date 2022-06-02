@@ -44,7 +44,19 @@ a {
 	margin: 15px 0;
 }
 
-button {
+button{
+	border-radius: 20px;
+	border: 1px solid rgb(226, 66, 151);
+	background-color: rgb(226, 66, 151);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80s ease-in;
+}
+.btn {
 	border-radius: 20px;
 	border: 1px solid rgb(226, 66, 151);
 	background-color: rgb(226, 66, 151);
@@ -96,9 +108,9 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
+	width: 800px;
 	max-width: 100%;
-	min-height: 480px;
+	min-height:720px;
 }
 
 .form-container1 {

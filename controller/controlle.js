@@ -3,6 +3,8 @@ const  connect  = require('../database/bd');
 const router =  express.Router();
 const data = require('../millderware/requete');
 const upload = require("../millderware/multer");
+const Logger = require('nodemon/lib/utils/log');
+const { validationResult } = require('express-validator');
 
 const control = class{
     static Accueil = async(req=request,res=response)=>{
@@ -56,10 +58,12 @@ const control = class{
         req.params.id('liste4')
     }
     static connexion =(req=request,res=response)=>{
-        res.render('conn')
+        res.render('conn',)
     }
 
-    
+    static inscrire =(req=request,res=response)=>{
+        res.render('insc',{alert:null})
+    }
     static panier =(req=request,res=response)=>{
         res.render('panier')
     }
@@ -84,7 +88,55 @@ const control = class{
         console.log("sdfghjk",req.file.path);
         data.adminInsert(req.body,req.file)
 
+
+
+        
+
     }
+
+
+
+    static inscrirepost =(req=request,res=response)=>{
+
+        // console.log("mes donnes",req.body);
+    
+        const errors = validationResult(req)
+        if(!errors.isEmpty() ){
+            const alert =errors.mapped() 
+            console.log("erreur",alert);
+            res.render('insc',{
+                alert:alert  
+            }) 
+
+            // res.json(alert); 
+            
+        }   
+        else{
+            data.pageinscription(req.body)
+            res.redirect("/conn")
+        }
+    }
+
+
+    static connexionpost =(req=request,res=response)=>{
+
+        data.pageconnexion(req.body)
+        .then(succes =>{
+            if (succes.length > 0) {
+                console.log('succes', succes);
+                res.redirect('/')
+            }else{
+                console.log("Email n'est pas correct", succes);
+                res.redirect('/conn')
+            }
+        })
+        .catch(error =>{
+            console.log('error', error);
+        })
+        
+    }
+
+    
     
     
    

@@ -10,23 +10,8 @@
 
 
 <div class="container1" id="container1">
-	<div class="form-container1 sign-up-container1">
-		<form action="#">
-			<h1>Inscription</h1>
-			<div class="social-container1">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-			</div>
-			<span>utilisez votre email pour vous inscrire</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Inscription</button>
-		</form>
-	</div>
 	<div class="form-container1 sign-in-container1">
-		<form action="#">
+		<form action="/conn" method="post">
 			<h1>Connexion</h1>
 			<div class="social-container1">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -34,24 +19,28 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>utilisez votre compte</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="email" name="email" placeholder="Email" />
+			<input type="password" name="password" placeholder="Password" />
 			<a href="#">Mot de passe oublié?</a>
-			<button>Connexion</button>
+			<input type="submit" value="Connexion" class="btn">
 		</form>
 	</div>
 	<div class="overlay-container1">
 		<div class="overlay">
-			<div class="overlay-panel overlay-left">
+			<!-- <div class="overlay-panel overlay-right">
 				<h1>Bienvenue sur notre site</h1>
 				<p>Pour rester en contact avec nous, veuillez vous connecter avec vos informations personnelles</p>
-				<button class="ghost" id="signIn">Connexion</button>
-			</div>
-			<div class="overlay-panel overlay-right">
+			</div> -->
+
+			 <!-- <div class="overlay-panel overlay-left">
+				<h1>Bienvenue sur notre site</h1>
+				<p>Pour rester en contact avec nous, veuillez vous connecter avec vos informations personnelles</p>
+			</div> -->
+
+			 <div class="overlay-panel overlay-right">
 				<h1>Salut!!</h1>
-				<p>Entrez vos données personnelles et commencez votre voyage avec nous</p>
-				<button class="ghost" id="signUp">Inscription</button>
-			</div>
+				<p>Entrez vos données personnelles et commencez votre voyage avec nous</p> 
+			</div>  
 		</div>
 	</div>
 </div>

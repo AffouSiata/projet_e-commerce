@@ -104,8 +104,11 @@ const data = class{
                 }
             
                 }) 
-        
+   
+                
     }
+
+
    static adminaffiche =()=>{
     return new Promise((resolve,rejet)=>{
             connect.query(' SELECT * FROM article ',function(error,resultat){
@@ -120,6 +123,89 @@ const data = class{
         })
     })
    }
+
+
+   
+    static pageinscription =(donne)=>{
+       let {nom,prenom,email,date_ajout,date_mise,password,commune,telephone,imageUtilisateur}=donne
+
+       let requete='INSERT INTO utilisateurs(nom,prenom,email,date_ajout,date_mise,password,commune,telephone,imageUtilisateur) VALUES(?,?,?,?,?,?,?,?,?)'
+       let verification  = 'SELECT * FROM utilisateurs WHERE email=?';
+       connect.query(verification,[email],(error,resultat)=>{
+           if(resultat == ""){
+                console.log("email n'existe pas");
+                connect.query(requete,[nom,prenom,email,date_ajout,date_mise,password,commune,telephone,imageUtilisateur],(error,resultat)=>{
+                    if(error){
+                        console.log("mon erreur",error);
+                    }
+                    else{
+                        console.log("ok",resultat);
+                    }
+                })
+
+               
+           }
+           else{
+               console.log("email existe déja");
+           }
+            
+       })
+            
+
+       
+    }
+   
+
+
+    static pageconnexion = (data)=>{
+  
+        let  {email, password}=data
+       return new Promise((resolve,reject)=>{
+        connect.query('SELECT * FROM utilisateurs WHERE email = ?', [email],function(error,resultat){
+            if(resultat)
+            {
+                resolve(resultat)
+            }
+            else{
+                reject(error)
+            }       
+        })
+       })
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // if(email.length > 0){
+        //     console.log("dddd",data);
+           
+        // }
+
+        // if(data.length > 0){
+        //     console.log("dddd",data);
+        //     connect.query('SELECT * FROM utilisateurs WHERE email=?  and password=? ', [email,password],function(error,resultat){
+        //         if(error)
+        //         {
+        //           console.log("errors",error);  
+        //         }
+        //         else{
+        //             console.log("connexion recu",resultat);
+        //         }       
+        //     })
+        // }else{
+        //    console.log("donnés incorrectes");
+        // }
+        
+  
+    }
     
         
 

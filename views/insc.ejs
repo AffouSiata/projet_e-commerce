@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6b4a8ac2d2.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../public/css/insc.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container1" id="container1">
+        <div class="form-container1 sign-in-container1">
+            <form action="/insc" method="post">	
+                <h1>Inscription</h1>
+                
+                <% if(alert) {%>
+                    <p><%= alert.message %></p>
+                <% } %>
+                <div class="social-container1">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>utilisez votre email pour vous inscrire</span>
+                <input type="text" name="nom" placeholder="Nom" />
+                <% if (alert && alert.nom) {%>
+                    <div class="validation" style="color: red; font-size: 10px;">
+                        <%= alert.nom.msg %> 
+                    </div>
+                <% }%>
+                
+                <input type="text" name="prenom" placeholder="Prenom" />
+                <% if (alert && alert.prenom) {%>
+                    <div class="validation" style="color: red;">
+                        <%= alert.prenom.msg %> 
+                    </div>
+                <% }%>
+                
+                <input type="email" name="email" placeholder="Email" />
+                <% if (alert && alert.email) {%>
+                    <div class="validation" style="color: red;">
+                        <%= alert.email.msg %> 
+                    </div>
+                <% }%>
+                
+                <input type="date" name="date_ajout" hidden placeholder="Date_ajout" />
+                <input type="date" name="date_mise"   hidden placeholder="Date_mise" />
+    
+                <input type="password" name="password" placeholder="Password" />
+                <input type="text" name="commune" placeholder="Commune" />
+                <input type="text" name="telephone" placeholder="Telephone" />
+                <input type="file"  name="imageUtilisateur" placeholder="imageUtilisateur" />
+                <input type="submit" value="Inscription" class="btn">
+               
+            </form>
+        </div>
+        <div class="overlay-container1">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <h1>Bienvenue sur notre site</h1>
+                    <p>Pour rester en contact avec nous, veuillez vous connecter avec vos informations personnelles</p>
+                </div>
+                <!-- <div class="overlay-panel overlay-right">
+                    <h1>Salut!!</h1>
+                    <p>Entrez vos données personnelles et commencez votre voyage avec nous</p>
+            
+                </div> -->
+            </div>
+        </div>
+    </div>
+<script  src="../public/js/conn.js"></script>
+</body>
+</html>
