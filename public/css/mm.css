@@ -101,6 +101,17 @@ header .page1 i{
     font-size: 1.5rem;
     color: #FFF;
 }
+.icon::after{
+    content: " ";
+    width: 10px;
+    height: 60px;
+    border-radius: 50px;
+    padding: 5px;
+    background: black;
+    color: #373535;
+    border: 1px solid #373535;
+}
+
 header .navbar a:hover{
     background-color:rgb(226, 66, 151); 
     padding: 15px;

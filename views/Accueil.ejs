@@ -27,7 +27,7 @@
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="page1"><a href="/conn"><i class="fas fa-user espace"></i></a></div>
-                <div class="page1"><a href="/panier"><i class="fas fa-shopping-cart"></i></a></div>
+                <div class="page1"><a href="/panier"><i class="fas fa-shopping-cart" class="icon"></i></a></div>
             </header>
         </div>
         <div class="corps">
@@ -109,10 +109,10 @@
             <div class="swiper-wrapper">
                 
                 <% article1.forEach(function(article1){ %>
-                <div class="swiper-slide box">
-                    <img src="<%=article1.image_Article %>" alt="">
-                    <h3><%=article1.nomArticle %></h3>
-                    <div class="price"> <%=article1.prixArticle %> cfa </div>
+                <div class="swiper-slide box" id="<%=article1.id %>">
+                    <img src="<%=article1.image_Article %>" id="image" class="image" alt="">
+                    <h3 id="nom" class="nom"><%=article1.nomArticle %></h3>
+                    <div class="price" id="prix"> <%=article1.prixArticle %> cfa </div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -120,10 +120,14 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <a href="/details/<%=article1.id %>" class="btn">Ajouter au panier</a>
+                    <a href="/details/<%=article1.id %>"></a>
+                    <button  onclick="ajoutpanier('<%= article1.id %>' )" class="btn">Ajouter au panier</button>
                 </div>
 
                 <% }); %>
+
+
+            
 
 
 
@@ -410,4 +414,6 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/6b4a8ac2d2.js" crossorigin="anonymous"></script>
     <script src="../public/js/mm.js"></script>
+    <script src="../public/js/local.js"></script>
+    
 </body>

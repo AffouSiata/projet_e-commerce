@@ -15,8 +15,29 @@ const control = class{
         res.render("Accueil",{categorie:categorie,article1:article1,article2:article2})
         // console.log("cat",categorie);
         // res.json(article1);
-       
+
+
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     static liste1 =(req=request,res=response)=>{
         data.liste(req.params.id).then(resultat=>{
             // console.log("erererere",resultat);
